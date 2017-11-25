@@ -1,0 +1,9 @@
+{
+  "server": "65.49.216.70",
+  "server_port": 8851,
+  "local_port": 1080,
+  "password": "yuan~521",
+  "timeout": 300,
+  "method": "aes-256-cfb",
+  "fast_open": true
+}
