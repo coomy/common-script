@@ -1,0 +1,12 @@
+#!/bin/bash
+echo $#
+
+#br=`git symbolic-ref --short -q HEAD`
+br=`git br -vv | grep "^\*" | awk -F "[" '{print $2}' | awk -F ":" '{print $1}' | awk -F "/" '{print $2}'`
+
+if [ $# == 1 ] 
+then
+  git push origin $1:refs/for/$br
+else
+  git push origin HEAD:refs/for/$br
+fi
