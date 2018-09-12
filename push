@@ -2,7 +2,19 @@
 echo $#
 
 #br=`git symbolic-ref --short -q HEAD`
-br=`git br -vv | grep "^\*" | awk -F "[" '{print $2}' | awk -F ":" '{print $1}' | awk -F "/" '{print $2}'`
+#br=`git br -vv | grep "^\*" | awk -F "[" '{print $2}' | awk -F ":" '{print $1}' | awk -F "/" '{print $2}'`
+br=`git br -vv | grep "^\*" | awk -F "[" '{print $2}' | awk -F ":" '{print $1}' | awk -F "/" '{print $2}' | awk -F "]" '{print $1}'`
+
+echo "branch is [${br}] ? [y/n]"
+read result
+
+if [ $result != "y" ]; then
+  echo "n"
+  exit
+else 
+  echo "y"
+fi
+exit
 
 if [ $# == 1 ] 
 then
