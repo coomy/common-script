@@ -1,0 +1,36 @@
+git lg --author="coomy" --after="2018-12-04 17:00:00" --before="2018-12-05 18:00:00"  # 查看某个时间断的提交
+
+# 带上-p是显示更详细的信息，类似git show; --stat 是显示粗略的文件修改信息
+git log -p xxx
+
+#查看某个提交ID都修改了哪些文件
+git log --stat ID -1
+git show --stat ID
+
+#查看某个提交ID的详细修改信息
+git log -p ID -1
+git show ID
+
+#查看某个文件的修改历史
+##查看文件
+git log --stat -- src/net/url_request/url_request.cc
+##查看详情
+git log -p -1 -- src/net/xxxx
+
+#查看最近的几个提交
+git log -p -2
+
+#查看某个分支下的提交记录
+git log BRANCH
+
+#查看某两个分之之间的不同提交记录
+git log --oneline branch1 ^branch2      # branch1有、branch2没有
+git log --oneline branch1...branch2     # branch1比branch2多提交的内容
+
+
+--- 技巧 ---
+# 搜索某人的提交
+git log --author xxx
+
+# 搜做提交关键字
+git log --grep xxx
