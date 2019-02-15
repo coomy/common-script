@@ -9,5 +9,5 @@ plugins=(git autojump cp zsh-autosuggestions)
 ~~ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8' ~~
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
 
-bindkey '^\' autosuggest-execute
+bindkey '^\\' autosuggest-execute
 
