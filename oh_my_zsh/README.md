@@ -12,6 +12,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
 bindkey '^\\' autosuggest-execute
 
 ## 如果上述颜色fg设置不生效，说明系统颜色系统是8，需要改成256color
+- 在 .zshrc 中添加 export TERM="xterm-256color"
+或者
 - 添加 zsh-256color 到 plugins
 - cd $ZSH_CUSTOM/plugins && git clone https://github.com/chrissicool/zsh-256color
 
