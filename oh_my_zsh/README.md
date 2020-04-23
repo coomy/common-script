@@ -15,7 +15,7 @@ plugins=(git autojump cp zsh-autosuggestions)
 ~~ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'~~
 ```
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
-bindkey '^\\' autosuggest-execute
+bindkey '^\\' autosuggest-execute // 这个是快捷键绑定，一键补全并执行
 ```
 
 ## 如果上述颜色fg设置不生效，说明系统颜色系统是8，需要改成256color
