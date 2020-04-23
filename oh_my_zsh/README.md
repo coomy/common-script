@@ -10,8 +10,10 @@ plugins=(git autojump cp zsh-autosuggestions)
 删除上面这行，避免每次执行操作后都要 git status，对于大工程速度会很慢
 
 ## ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-```
+自动补全的文本颜色默认会和当前输入的文字颜色一样，很难辨识。一般会把提示补全的文字改浅一点，可以找到如下代码，并替换：
+
 ~~ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'~~
+```
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=238'
 bindkey '^\\' autosuggest-execute
 ```
